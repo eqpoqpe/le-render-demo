@@ -30,6 +30,11 @@ const MAPPING_DIRR_RERENDER = {
           content: []
         }
       ]
+    },
+    {
+      _$: 0,
+      tag: document.createElement("div"),
+      content: [22]
     }
   ]
 };
@@ -42,8 +47,12 @@ const MAPPING_DIRR_RERENDER = {
  * 
  * @param {object} MRT 
  */
-function le_render(MRT) {
-  console.log(MRT);
+function le_render(MRT, proot) {
+  // console.log(MRT);
+
+  if (MRT.MAPPING_RENDER_TREE.length > 0) {
+    MRT.MAPPING_RENDER_TREE.map((le) => { console.log(le); });
+  }
 }
 
 // supported diff-commands render
@@ -52,5 +61,5 @@ function render() {}
 (function () {
   // setTimeout(() => {}, 3000);
 
-  le_render(MAPPING_DIRR_RERENDER);
+  le_render(MAPPING_DIRR_RERENDER, document.querySelector("page-root"));
 })()
