@@ -8,16 +8,16 @@ const MAPPING_DIRR_RERENDER = {
   MAPPING_RENDER_TREE: [
     {
       _$: 0,
-      tag: "div",
+      tag: document.createElement("div"),
       content: [
         22,
         {
           _$: 0,
-          tag: "div",
+          tag: document.createElement("div"),
           content: [
             {
               _$: 0,
-              tag: "div",
+              tag: document.createElement("div"),
               content: [
                 0
               ]
@@ -26,7 +26,7 @@ const MAPPING_DIRR_RERENDER = {
         },
         {
           _$: 0,
-          tag: "div",
+          tag: document.createElement("div"),
           content: []
         }
       ]
@@ -34,8 +34,23 @@ const MAPPING_DIRR_RERENDER = {
   ]
 };
 
-// first page render
-function le_render() {}
+
+/**
+ * first page render 
+ * 
+ * @flow
+ * 
+ * @param {object} MRT 
+ */
+function le_render(MRT) {
+  console.log(MRT);
+}
 
 // supported diff-commands render
 function render() {}
+
+(function () {
+  // setTimeout(() => {}, 3000);
+
+  le_render(MAPPING_DIRR_RERENDER);
+})()
