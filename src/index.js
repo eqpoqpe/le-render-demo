@@ -33,14 +33,16 @@ function le_render(MRT, proot) {
   proot.innerText = "";
   children.map((child) => {
     proot.appendChild(child);
-  })
+  });
 }
 
 // supported diff-commands render
 function render() {}
 
 (function () {
-  // setTimeout(() => {}, 3000);
-
   le_render(MAPPING_DIRR_RERENDER, document.querySelector("#page-root"));
+  
+  setTimeout(() => {
+    MAPPING_DIRR_RERENDER.MAPPING_RENDER_TREE[0].content[3].tag.childNodes[0].nodeValue = "DONE";
+  }, 1000);
 })()
