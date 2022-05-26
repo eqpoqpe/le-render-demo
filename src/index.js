@@ -1,44 +1,8 @@
+import MAPPING_DIRR_RERENDER from "./MAPPING_TREE";
+
 const proot = document.querySelector("#page-root");
 
 const __SLICE__ = false;
-
-// data to mapping tree
-// disabled properties
-const MAPPING_DIRR_RERENDER = {
-  MAPPING_RENDER_TREE: [
-    {
-      _$: 0,
-      tag: document.createElement("div"),
-      content: [
-        22,
-        {
-          _$: 0,
-          tag: document.createElement("div"),
-          content: [
-            {
-              _$: 0,
-              tag: document.createElement("div"),
-              content: [
-                0
-              ]
-            }
-          ]
-        },
-        {
-          _$: 0,
-          tag: document.createElement("div"),
-          content: []
-        }
-      ]
-    },
-    {
-      _$: 0,
-      tag: document.createElement("div"),
-      content: [22]
-    }
-  ]
-};
-
 
 /**
  * first page render 
@@ -51,7 +15,10 @@ function le_render(MRT, proot) {
   // console.log(MRT);
 
   if (MRT.MAPPING_RENDER_TREE.length > 0) {
-    MRT.MAPPING_RENDER_TREE.map((le) => { console.log(le); });
+    MRT.MAPPING_RENDER_TREE.map((le) => {
+      if (!le._$) {
+      }
+    });
   }
 }
 
