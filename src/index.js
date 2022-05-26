@@ -8,9 +8,8 @@ function mountLoop(parent_node, le_nodes) {
     if (typeof node === "object" && node.hasOwnProperty("_$")) {
       if (node.content.length > 0) {
         mountLoop(node.tag, node.content);
+        parent_node.appendChild(node.tag);
       }
-
-      parent_node.appendChild(node.tag);
     } else {
       parent_node.appendChild(document.createTextNode(node));
     }
