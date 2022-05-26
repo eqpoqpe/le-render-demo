@@ -36,7 +36,19 @@ function le_render(MRT, proot) {
 }
 
 // supported diff-commands render
-function render() {}
+
+/**
+ * receives commands from mapping diff
+ * called by dispatcher
+ * 
+ * @param {*} MRT 
+ * @param {{diff: boolean}} options 
+ */
+function render(MRT, options) {
+  if (typeof options !== "undefined" && options) {
+  } else {
+  }
+}
 
 (function () {
   le_render(MAPPING_DIRR_RERENDER, document.querySelector("#page-root"));

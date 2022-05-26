@@ -10,3 +10,5 @@ LE is a product of container states and side effects executed (or dispatcher) on
          [render]
 ```
 [**Run Demo**](https://stackblitz.com/edit/node-wgdsif)
+
+## render

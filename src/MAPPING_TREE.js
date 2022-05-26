@@ -1,6 +1,7 @@
 // data to mapping tree
 // disabled properties
 export default {
+  _$: 0,
   MAPPING_RENDER_TREE: [
     {
       _$: 0,
