@@ -1,4 +1,5 @@
 # Layout Element Render
+LE is a product of container state values and side effects executed on Layout-runtime.
 ```
     -----------------
    | Old LE | New LE |
