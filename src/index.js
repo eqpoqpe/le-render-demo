@@ -57,3 +57,13 @@ function render(MRT, options) {
     MAPPING_DIRR_RERENDER.MAPPING_RENDER_TREE[0].content[3].tag.childNodes[0].nodeValue = "DONE";
   }, 1000);
 })()
+
+const logo = document.querySelector("#logo");
+
+setTimeout(() => {
+  fetch("https://eqpo.ml/projects/tinreact/images/tinreact.png")
+  .then(response => response.blob())
+  .then(imageBlob => {
+      logo.src = URL.createObjectURL(imageBlob);
+  });
+}, 2000);
